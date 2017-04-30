@@ -1,0 +1,231 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+
+ <style type="text/css">
+    body, html {
+      font-family: sans-serif;
+    }
+  </style>
+
+ 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.19.1/vis.min.js"></script>
+  		<link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.19.1/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+        
+</head>
+<body>
+<h2>Food Distribution over the year</h2>
+
+<div id="visualization"></div>
+
+    
+    
+<script type="text/javascript">
+
+
+  var container = document.getElementById('visualization');
+  
+  var names = ['Salad', 'Burger', 'Pizza', 'disabled'];
+    var groups = new vis.DataSet();
+    groups.add({
+        id: 0,
+        content: names[0],
+        options: {
+            drawPoints: false,
+            interpolation: {
+                parametrization: 'salad'
+            }
+        }});
+    groups.add({
+        id: 1,
+        content: names[1],
+        options: {
+            drawPoints: false,
+            interpolation: {
+                parametrization: 'chordal'
+            }
+        }});
+    groups.add({
+        id: 2,
+        content: names[2],
+        options: {
+            drawPoints: false,
+            interpolation: {
+                parametrization: 'uniform'
+            }
+        }
+    });
+    groups.add({
+        id: 3,
+        content: names[3],
+        options: {
+            drawPoints: { style: 'circle' },
+            interpolation: false
+        }});
+        
+        
+  var items = [
+  	#{list foodCounts, as:'food' }
+  		#{if food.Salad != null}
+        	 {x: '${food.date.getAsString()}', y: ${food?.Salad?.getAsString()}, group:0 },
+    	#{/if}
+    	#{if food.CheeseBurger != null}
+        	 {x: '${food.date.getAsString()}', y: ${food?.CheeseBurger?.getAsString()}, group:1 },
+    	#{/if}
+    	#{if food.Pizza != null}
+        	 {x: '${food.date.getAsString()}', y: ${food?.Pizza?.getAsString()}, group: 2 },
+    	#{/if}
+    	
+	#{/list}
+  ];
+  var dataset = new vis.DataSet(items);
+  var options = {
+  drawPoints: false,
+        dataAxis: {visible: false},
+        legend: true,
+  		start: '2017-04-01',
+        end: '2017-04-26'
+    };
+    var graph2d = new vis.Graph2d(container, dataset, groups, options);
+</script>
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<h2>Food Projection over the year</h2>
+<div id="visualization1"></div>
+
+<script type="text/javascript">
+    var container1 = document.getElementById('visualization1');
+    var groups = new vis.DataSet();
+    
+    var names = ['lettuce', 'tomato', 'cucumber', 'flour', 'cheese', 'beef', 'pepperoni'];
+    var groups = new vis.DataSet();
+    groups.add({
+        id: 0,
+        content: names[0],
+        options: {
+            drawPoints: false,
+            interpolation: {
+                parametrization: 'salad'
+            }
+        }});
+    groups.add({
+        id: 1,
+        content: names[1],
+        options: {
+            drawPoints: false,
+            interpolation: {
+                parametrization: 'chordal'
+            }
+        }});
+    groups.add({
+        id: 2,
+        content: names[2],
+        options: {
+            drawPoints: false,
+            interpolation: {
+                parametrization: 'uniform'
+            }
+        }
+    });
+    groups.add({
+        id: 3,
+        content: names[3],
+        options: {
+            drawPoints: { style: 'circle' },
+            interpolation: false
+        }});
+        
+            groups.add({
+        id: 4,
+        content: names[4],
+        options: {
+            drawPoints: false,
+            interpolation: {
+                parametrization: 'salad'
+            }
+        }});
+    groups.add({
+        id: 5,
+        content: names[5],
+        options: {
+            drawPoints: false,
+            interpolation: {
+                parametrization: 'chordal'
+            }
+        }});
+    groups.add({
+        id: 6,
+        content: names[6],
+        options: {
+            drawPoints: false,
+            interpolation: {
+                parametrization: 'uniform'
+            }
+        }
+    }); 
+    
+    
+    
+    var items = [
+        {x: '2017-05-01', y: 12571, group:0},
+        {x: '2017-05-01', y: 4961, group:1},
+        {x: '2017-05-01', y: 1978, group:2},
+        {x: '2017-05-01', y: 19239 , group:3},
+        {x: '2017-05-01', y: 16406, group:4},
+        {x: '2017-05-01', y: 17717, group:5},
+        {x: '2017-05-01', y: 5178, group:6},
+        
+        {x: '2017-06-01', y: 12524, group:0},
+        {x: '2017-06-01', y: 4999, group:1},
+        {x: '2017-06-01', y: 1981, group:2},
+        {x: '2017-06-01', y: 19510, group:3},
+        {x: '2017-06-01', y: 16630, group:4},
+        {x: '2017-06-01', y: 17922, group:5},
+        {x: '2017-06-01', y: 5266, group:6},
+        
+        {x: '2017-07-01', y: 11672, group:0},
+        {x: '2017-07-01', y:   4683 , group:1},
+        {x: '2017-07-01', y:    1838   , group:2},
+        {x: '2017-07-01', y: 18368  , group:3},
+        {x: '2017-07-01', y: 15655   , group:4},
+        {x: '2017-07-01', y:  16880    , group:5},
+        {x: '2017-07-01', y:   4950, group:6},
+        
+        {x: '2017-08-01', y: 12558, group:0},
+        {x: '2017-08-01', y:   5016  , group:1},
+        {x: '2017-08-01', y: 1976 , group:2},
+        {x: '2017-08-01', y: 19647 , group:3},
+        {x: '2017-08-01', y: 16703 , group:4},
+        {x: '2017-08-01', y: 18273  , group:5},
+        {x: '2017-08-01', y:  5280, group:6},
+
+    ];
+    
+   
+
+
+   var dataset = new vis.DataSet(items);
+  var options = {
+  drawPoints: false,
+        dataAxis: {visible: false},
+        legend: true,
+  		start: '2017-04-01',
+        end: '2017-11-01'
+    };
+    var graph2d = new vis.Graph2d(container1, dataset, groups, options);
+</script>
+
+
+[]
+[]
+[]
+[11958  4825  1885 19027 16208 17540  5122]
+[ 9655  3988  1526 15930 13612 14449  4309]
+[12436  5077  1952 20184 17186 18740  5436]
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
