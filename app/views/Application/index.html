@@ -13,7 +13,8 @@
         
 </head>
 <body>
-<h2>Food Distribution over the year</h2>
+<div id="main" style="width:95%">
+<h2>Orders made</h2>
 
 <div id="visualization"></div>
 
@@ -80,7 +81,7 @@
   var dataset = new vis.DataSet(items);
   var options = {
   drawPoints: false,
-        dataAxis: {visible: false},
+        dataAxis: {visible: true},
         legend: true,
   		start: '2017-04-01',
         end: '2017-04-26'
@@ -91,9 +92,9 @@
 
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br>
 
-<h2>Food Projection over the year</h2>
+<h2>Ingredient projections for the rest of year (lbs) </h2>
 <div id="visualization1"></div>
 
 <script type="text/javascript">
@@ -106,7 +107,7 @@
         id: 0,
         content: names[0],
         options: {
-            drawPoints: false,
+            drawPoints: { style: 'circle' },
             interpolation: {
                 parametrization: 'salad'
             }
@@ -115,7 +116,7 @@
         id: 1,
         content: names[1],
         options: {
-            drawPoints: false,
+            drawPoints: { style: 'circle' },
             interpolation: {
                 parametrization: 'chordal'
             }
@@ -124,7 +125,7 @@
         id: 2,
         content: names[2],
         options: {
-            drawPoints: false,
+            drawPoints: { style: 'circle' },
             interpolation: {
                 parametrization: 'uniform'
             }
@@ -142,7 +143,7 @@
         id: 4,
         content: names[4],
         options: {
-            drawPoints: false,
+            drawPoints: { style: 'circle' },
             interpolation: {
                 parametrization: 'salad'
             }
@@ -151,7 +152,7 @@
         id: 5,
         content: names[5],
         options: {
-            drawPoints: false,
+            drawPoints: { style: 'circle' },
             interpolation: {
                 parametrization: 'chordal'
             }
@@ -160,7 +161,7 @@
         id: 6,
         content: names[6],
         options: {
-            drawPoints: false,
+            drawPoints: { style: 'circle' },
             interpolation: {
                 parametrization: 'uniform'
             }
@@ -201,6 +202,30 @@
         {x: '2017-08-01', y: 16703 , group:4},
         {x: '2017-08-01', y: 18273  , group:5},
         {x: '2017-08-01', y:  5280, group:6},
+        
+         {x: '2017-09-01', y: 11958 , group:0},
+        {x: '2017-09-01', y:   4825    , group:1},
+        {x: '2017-09-01', y: 1885, group:2},
+        {x: '2017-09-01', y:  19027 , group:3},
+        {x: '2017-09-01', y: 16208  , group:4},
+        {x: '2017-09-01', y: 17540   , group:5},
+        {x: '2017-09-01', y:  5122, group:6},
+        
+        {x: '2017-10-01', y:  9655 , group:0},
+        {x: '2017-10-01', y:  3988 , group:1},
+        {x: '2017-10-01', y:  1526 , group:2},
+        {x: '2017-10-01', y:   15930 , group:3},
+        {x: '2017-10-01', y: 13612 , group:4},
+        {x: '2017-10-01', y: 14449 , group:5},
+        {x: '2017-10-01', y:   4309, group:6},
+        
+         {x: '2017-11-01', y: 12436, group:0},
+        {x: '2017-11-01', y:    5077, group:1},
+        {x: '2017-11-01', y:    1952 , group:2},
+        {x: '2017-11-01', y: 20184 , group:3},
+        {x: '2017-11-01', y: 17186 , group:4},
+        {x: '2017-11-01', y: 18740, group:5},
+        {x: '2017-11-01', y:   5436  , group:6},
 
     ];
     
@@ -210,22 +235,16 @@
    var dataset = new vis.DataSet(items);
   var options = {
   drawPoints: false,
-        dataAxis: {visible: false},
+        dataAxis: {visible: true},
         legend: true,
   		start: '2017-04-01',
-        end: '2017-11-01'
+        end: '2017-12-01'
     };
     var graph2d = new vis.Graph2d(container1, dataset, groups, options);
 </script>
 
 
-[]
-[]
-[]
-[11958  4825  1885 19027 16208 17540  5122]
-[ 9655  3988  1526 15930 13612 14449  4309]
-[12436  5077  1952 20184 17186 18740  5436]
-
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
