@@ -1,3 +1,27 @@
+<!-- 
+Copyright (c) 2017 WasteNot
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+ -->
+
+
+
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
@@ -171,62 +195,84 @@
     
     
     var items = [
-        {x: '2017-05-01', y: 12571, group:0},
-        {x: '2017-05-01', y: 4961, group:1},
-        {x: '2017-05-01', y: 1978, group:2},
-        {x: '2017-05-01', y: 19239 , group:3},
-        {x: '2017-05-01', y: 16406, group:4},
-        {x: '2017-05-01', y: 17717, group:5},
-        {x: '2017-05-01', y: 5178, group:6},
+        {x: '2017-05-01', y: 12558, group: 0},
+{x: '2017-05-01', y:   3988, group: 1},
+{x: '2017-05-01', y:   1976, group: 2},
+{x: '2017-05-01', y:  19647, group: 3},
+{x: '2017-05-01', y:  16703, group: 4},
+{x: '2017-05-01', y:  14449, group: 5},
+{x: '2017-05-01', y:   5280, group: 6},
+{x: '2017-05-08', y:   11958, group: 0},
+{x: '2017-05-08', y:   4825, group: 1},
+{x: '2017-05-08', y:   1885, group: 2},
+{x: '2017-05-08', y:  19027, group: 3},
+{x: '2017-05-08', y:  16208, group: 4},
+{x: '2017-05-08', y:  17540, group: 5},
+{x: '2017-05-08', y:   5122, group: 6},
+{x: '2017-05-15', y:   11958, group: 0},
+{x: '2017-05-15', y:   5016, group: 1},
+{x: '2017-05-15', y:   1952, group: 2},
+{x: '2017-05-15', y:  20184, group: 3},
+{x: '2017-05-15', y:  13612, group: 4},
+{x: '2017-05-15', y:  18273, group: 5},
+{x: '2017-05-15', y:   4309, group: 6},
+{x: '2017-05-22', y:   12558, group: 0},
+{x: '2017-05-22', y:   5016, group: 1},
+{x: '2017-05-22', y:   1976, group: 2},
+{x: '2017-05-22', y:  19647, group: 3},
+{x: '2017-05-22', y:  16703, group: 4},
+{x: '2017-05-22', y:  18273, group: 5},
+{x: '2017-05-22', y:   5280, group: 6},
+{x: '2017-05-29', y:    9655, group: 0},
+{x: '2017-05-29', y:   6825, group: 1},
+{x: '2017-05-29', y:   2085, group: 2},
+{x: '2017-05-29', y:  19027, group: 3},
+{x: '2017-05-29', y:  15500, group: 4},
+{x: '2017-05-29', y:  17500, group: 5},
+{x: '2017-05-29', y:   4002, group: 6},
+{x: '2017-06-05', y:   12436, group: 0},
+{x: '2017-06-05', y:   5077, group: 1},
+{x: '2017-06-05', y:   1526, group: 2},
+{x: '2017-06-05', y:  15930, group: 3},
+{x: '2017-06-05', y:  17186, group: 4},
+{x: '2017-06-05', y:  18740, group: 5},
+{x: '2017-06-05', y:   5436, group: 6},
+{x: '2017-06-12', y:   12558, group: 0},
+{x: '2017-06-12', y:   3988, group: 1},
+{x: '2017-06-12', y:   1976, group: 2},
+{x: '2017-06-12', y:  19647, group: 3},
+{x: '2017-06-12', y:  16703, group: 4},
+{x: '2017-06-12', y:  14449, group: 5},
+{x: '2017-06-12', y:   5280, group: 6},
+{x: '2017-06-19', y:   11958, group: 0},
+{x: '2017-06-19', y:   5016, group: 1},
+{x: '2017-06-19', y:   1952, group: 2},
+{x: '2017-06-19', y:  20184, group: 3},
+{x: '2017-06-19', y:  13612, group: 4},
+{x: '2017-06-19', y:  18273, group: 5},
+{x: '2017-06-19', y:   4309, group: 6},
+{x: '2017-06-26', y:   12558, group: 0},
+{x: '2017-06-26', y:   5016, group: 1},
+{x: '2017-06-26', y:   1976, group: 2},
+{x: '2017-06-26', y:  19647, group: 3},
+{x: '2017-06-26', y:  16703, group: 4},
+{x: '2017-06-26', y:  18273, group: 5},
+{x: '2017-06-26', y:   5280, group: 6},
+{x: '2017-07-03', y:    9655, group: 0},
+{x: '2017-07-03', y:   6825, group: 1},
+{x: '2017-07-03', y:   2085, group: 2},
+{x: '2017-07-03', y:  15930, group: 3},
+{x: '2017-07-03', y:  15500, group: 4},
+{x: '2017-07-03', y:  17500, group: 5},
+{x: '2017-07-03', y:   4002, group: 6},
+{x: '2017-07-10', y:   12436, group: 0},
+{x: '2017-07-10', y:   5077, group: 1},
+{x: '2017-07-10', y:   1526, group: 2},
+{x: '2017-07-10', y:  19027, group: 3},
+{x: '2017-07-10', y:  17186, group: 4},
+{x: '2017-07-10', y:  18740, group: 5},
+{x: '2017-07-10', y:   5436, group: 6},
         
-        {x: '2017-06-01', y: 12524, group:0},
-        {x: '2017-06-01', y: 4999, group:1},
-        {x: '2017-06-01', y: 1981, group:2},
-        {x: '2017-06-01', y: 19510, group:3},
-        {x: '2017-06-01', y: 16630, group:4},
-        {x: '2017-06-01', y: 17922, group:5},
-        {x: '2017-06-01', y: 5266, group:6},
-        
-        {x: '2017-07-01', y: 11672, group:0},
-        {x: '2017-07-01', y:   4683 , group:1},
-        {x: '2017-07-01', y:    1838   , group:2},
-        {x: '2017-07-01', y: 18368  , group:3},
-        {x: '2017-07-01', y: 15655   , group:4},
-        {x: '2017-07-01', y:  16880    , group:5},
-        {x: '2017-07-01', y:   4950, group:6},
-        
-        {x: '2017-08-01', y: 12558, group:0},
-        {x: '2017-08-01', y:   5016  , group:1},
-        {x: '2017-08-01', y: 1976 , group:2},
-        {x: '2017-08-01', y: 19647 , group:3},
-        {x: '2017-08-01', y: 16703 , group:4},
-        {x: '2017-08-01', y: 18273  , group:5},
-        {x: '2017-08-01', y:  5280, group:6},
-        
-         {x: '2017-09-01', y: 11958 , group:0},
-        {x: '2017-09-01', y:   4825    , group:1},
-        {x: '2017-09-01', y: 1885, group:2},
-        {x: '2017-09-01', y:  19027 , group:3},
-        {x: '2017-09-01', y: 16208  , group:4},
-        {x: '2017-09-01', y: 17540   , group:5},
-        {x: '2017-09-01', y:  5122, group:6},
-        
-        {x: '2017-10-01', y:  9655 , group:0},
-        {x: '2017-10-01', y:  3988 , group:1},
-        {x: '2017-10-01', y:  1526 , group:2},
-        {x: '2017-10-01', y:   15930 , group:3},
-        {x: '2017-10-01', y: 13612 , group:4},
-        {x: '2017-10-01', y: 14449 , group:5},
-        {x: '2017-10-01', y:   4309, group:6},
-        
-         {x: '2017-11-01', y: 12436, group:0},
-        {x: '2017-11-01', y:    5077, group:1},
-        {x: '2017-11-01', y:    1952 , group:2},
-        {x: '2017-11-01', y: 20184 , group:3},
-        {x: '2017-11-01', y: 17186 , group:4},
-        {x: '2017-11-01', y: 18740, group:5},
-        {x: '2017-11-01', y:   5436  , group:6},
-
     ];
     
    
@@ -238,7 +284,7 @@
         dataAxis: {visible: true},
         legend: true,
   		start: '2017-04-01',
-        end: '2017-12-01'
+        end: '2017-08-11'
     };
     var graph2d = new vis.Graph2d(container1, dataset, groups, options);
 </script>
